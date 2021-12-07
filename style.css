@@ -4,8 +4,15 @@
   font-family: "Roboto", sans-serif;
 }
 
+:root {
+  --highlight-color: #ffcb01;
+  --primary-color: black;
+  --secondary-color: gray;
+  --bg-color: rgb(247, 247, 247);
+}
+
 body {
-  background-color: rgb(247, 247, 247);
+  background-color: var(--bg-color);
 }
 
 /* Navigation */
@@ -42,19 +49,28 @@ body {
 }
 
 .nav_pages .active {
-  background-color: #ffcb01;
+  background-color: var(--highlight-color);
 }
 
 .nav_pages li:hover {
-  background-color: #ffcb01;
+  background-color: var(--highlight-color);
   transition: 0.5s;
   cursor: pointer;
 }
 
+/* Common Style */
+.content {
+  width: 80%;
+  padding: 0% 10%;
+}
+
+.quotation {
+  font-style: italic;
+  color: var(--secondary-color);
+}
+
 /* Works */
 .works {
-  width: 90%;
-  margin: 0% 5%;
   display: grid;
   grid-template-columns: 50% 50%;
 }
@@ -68,17 +84,17 @@ body {
   padding: 3rem 1rem;
   font-size: 3rem;
   display: flex;
-  color: black;
+  color: var(--primary-color);
   flex-direction: column;
 }
 
 .work_list a {
-  color: black;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
 .work_list a:hover {
-  color: #ffcb01;
+  color: var(--highlight-color);
 }
 
 .work_info {
@@ -87,5 +103,21 @@ body {
 
 .work_subInfo {
   font-size: 1.5rem;
-  color: gray;
+  color: var(--secondary-color);
+}
+
+/* Detail */
+.detail {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 60%;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
 }
