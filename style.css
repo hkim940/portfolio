@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: rgb(247, 247, 247);
+}
+
+/* Navigation */
+.nav {
+  width: 90%;
+  padding: 0% 5%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.nav_logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav_logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.nav_pages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_pages li {
+  list-style: none;
+}
+
+.nav_pages a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav_pages .active {
+  background-color: #ffcb01;
+}
+
+.nav_pages li:hover {
+  background-color: #ffcb01;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* Works */
+.works {
+  width: 90%;
+  margin: 0% 5%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.work_list {
+  grid-column: 2;
+}
+
+.work_list li {
+  list-style: none;
+  padding: 3rem 1rem;
+  font-size: 3rem;
+  display: flex;
+  color: black;
+  flex-direction: column;
+}
+
+.work_list a {
+  color: black;
+  text-decoration: none;
+}
+
+.work_list a:hover {
+  color: #ffcb01;
+}
+
+.work_info {
+  font-size: 3rem;
+}
+
+.work_subInfo {
+  font-size: 1.5rem;
+  color: gray;
+}
