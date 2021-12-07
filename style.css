@@ -9,18 +9,72 @@
   --primary-color: black;
   --secondary-color: gray;
   --bg-color: rgb(247, 247, 247);
+
+  --xl-font: 3rem;
+  --l-font: 1.5rem;
+  --md-font: 1.3rem;
+  --regular-font: 1rem;
+  --sm-font: 0.9rem;
+}
+
+/* Reset CSS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+}
+
+h1 {
+  font-size: var(--xl-font);
+  font-weight: 400;
+}
+
+h2 {
+  font-size: var(--l-font);
+  color: var(--secondary-color);
+  font-weight: 300;
+}
+
+h3 {
+  font-size: var(--md-font);
+}
+
+h4 {
+  font-size: var(--sm-font);
+}
+
+p {
+  font-size: var(--regular-font);
+}
+
+blockquote {
+  font-size: var(--regular-font);
+  font-style: italic;
+  color: var(--secondary-color);
 }
 
 body {
   background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
 }
 
 /* Navigation */
 .nav {
   width: 90%;
   padding: 0% 5%;
+  height: 80px;
   display: grid;
   grid-template-columns: 70% 30%;
+  position: fixed;
+  background-color: var(--bg-color);
 }
 
 .nav_logo {
@@ -62,11 +116,8 @@ body {
 .content {
   width: 80%;
   padding: 0% 10%;
-}
-
-.quotation {
-  font-style: italic;
-  color: var(--secondary-color);
+  padding-top: 80px;
+  height: calc(100vh - 180px);
 }
 
 /* Works */
@@ -77,14 +128,19 @@ body {
 
 .work_list {
   grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: calc(100vh - 160px);
 }
 
 .work_list li {
   list-style: none;
-  padding: 3rem 1rem;
   font-size: 3rem;
-  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
   color: var(--primary-color);
+  display: flex;
   flex-direction: column;
 }
 
@@ -97,19 +153,24 @@ body {
   color: var(--highlight-color);
 }
 
-.work_info {
-  font-size: 3rem;
-}
-
-.work_subInfo {
-  font-size: 1.5rem;
-  color: var(--secondary-color);
-}
-
 /* Detail */
-.detail {
-  display: grid;
-  grid-template-columns: 40% 60%;
+aside {
+  position: fixed;
+}
+
+.detail_container {
+  width: 60%;
+  margin-left: 40%;
+}
+
+.detail_aside h2 {
+  margin-bottom: 0.5rem;
+}
+
+.detail_section h3,
+.detail_section p,
+.detail_section blockquote {
+  margin-bottom: 1rem;
 }
 
 .thumbnail {
@@ -120,4 +181,15 @@ body {
 .thumbnail img {
   width: 100%;
   height: 100%;
+}
+
+/* footer */
+footer {
+  bottom: 0;
+  color: var(--secondary-color);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
