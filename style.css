@@ -26,6 +26,7 @@ body {
   --bg-color: rgb(247, 247, 247);
 
   --xl-font: 3rem;
+  --md-l-font: 2rem;
   --l-font: 1.5rem;
   --md-font: 1.3rem;
   --regular-font: 1rem;
@@ -42,6 +43,7 @@ h4,
 h5,
 h6,
 p,
+div,
 blockquote {
   padding: 0;
   margin: 0;
@@ -183,6 +185,11 @@ aside {
 
 .detail_aside h2 {
   margin-bottom: 0.5rem;
+}
+
+.detail_section {
+  padding-bottom: 0;
+  margin-bottom: 2rem;
 }
 
 .detail_section h3,
@@ -383,4 +390,49 @@ footer {
   align-items: center;
   justify-content: center;
   font-size: var(--sm-font);
+}
+
+@media only screen and (max-width: 500px) {
+  .works {
+    display: flex;
+  }
+
+  .work_list h1 {
+    font-size: var(--l-font);
+  }
+  .work_list h2 {
+    font-size: var(--md-font);
+  }
+
+  .detail_aside {
+    position: relative;
+  }
+
+  .detail_container {
+    margin-top: 2rem;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .profile_aside {
+    display: none;
+  }
+
+  .nav {
+    grid-template-columns: 30% 70%;
+  }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 500px) {
+  .works {
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+
+  .work_list h1 {
+    font-size: var(--md-l-font);
+  }
+  .work_list h2 {
+    font-size: var(--md-font);
+  }
 }
