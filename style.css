@@ -147,6 +147,8 @@ a.disabled > * {
 .content {
   padding: 0% 10%;
   margin-top: 120px;
+  min-height: calc(100vh - 220px);
+  height: calc(100% - 220px);
 }
 
 /* Works */
@@ -240,13 +242,16 @@ aside {
   display: grid;
   grid-template-columns: 40% 50%;
   grid-column-gap: 10%;
-  height: calc(100vh - 220px);
 }
 
 .profile {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.profile_mobile {
+  display: none;
 }
 
 .profile_text {
@@ -400,8 +405,8 @@ footer {
   width: 100%;
   height: 100px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   font-size: var(--sm-font);
 }
 
@@ -448,10 +453,19 @@ footer {
 
   #profile_container {
     display: flex;
+    flex-direction: column;
   }
 
-  .profile_image {
+  .profile {
     display: none;
+  }
+
+  .profile_mobile {
+    display: block;
+  }
+
+  .profile_mobile img {
+    width: 100%;
   }
 }
 
