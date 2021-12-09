@@ -44,24 +44,48 @@
           <img src="../../imgs/Youtube_clone.png" alt="">
         </div>
         <!-- Overview -->
-        <div class="detail_section" id="overview">
+        <section class="detail_section" id="overview">
           <h3>Overview</h3>
           <p>
-            Personal Project where I cloned the Youtube Service. 
+            As a personal side project, I have created a CloneTube App - An responsive application that cloned existing Youtube features. 
             The goal of this project was to learn and deepend my understanding of React.
-            Application is able to perform various features that currently exists in Youtube Service, such as 
           </p>
-            <ul>
-                <li>Display popular videos upon loading</li>
-                <li>Allow users to search video he / she desires</li>
+          <ul>
+                <li>Display current 25 most popular videos</li>
+                <li>Search for a specific video</li>
+                <li>Retrieve detail information of selected video</li>
                 <li>Toggle between dark / light mode</li>
-                <li>Mobile Friendly</li>
-        </ul>
-        <div class="video">
-          <video src="../../video/Youtube_movie.mp4" controls>
-          </video>
+          </ul>
+          <p>Through this project, I was able to understand a bit more about React not only its
+             main concepts such as State and LifeCycle, but also its advanced concepts as well. Allowing me to create a fully functioning React Application from scratch. 
+          </p>
+      </section>
+      <section class="detail_section clonetube" id="features">
+        <div class="feature">
+          <h3>Features</h3>
+          <h4>Search for Specific video</h4>
+          <p>
+            CloneTube will display first 25 videos that matched the search criteria. 
+            Once user selects a video, it will fetch not only the video but also its
+            basic information such as Likes & Dislikes count, and Channel Information.
+          </p>
+          <div class="video">
+            <video src="../../video/Youtube_search.mp4" controls autoplay>
+            </video>
+          </div>
         </div>
+
+        <div class="feature">
+          <h4>Dark / Light Mode</h4>
+          <p>
+            Change between dark mode and light mode by simply selecing a toggle button.
+          </p>
+          <div class="video">
+            <video src="../../video/youtube_dark_light.mp4" controls autoplay>
+            </video>
+          </div>
         </div>
+      </section>
       </section>
     </main>
     <footer> 
